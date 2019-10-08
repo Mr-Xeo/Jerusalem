@@ -78,6 +78,11 @@ public class InventoryManager : MonoBehaviour
     public SpriteRenderer srSandBack;
     public SpriteRenderer srMoutain;
     public SpriteRenderer srSky;
+    public SpriteRenderer srGroundColor;
+
+    private Color32 groundColorNormal = new Color32(130, 50, 29, 255);
+    private Color32 groundColorDope = new Color32(42, 10, 47, 255);
+
 
     void Start()
     {
@@ -212,6 +217,8 @@ public class InventoryManager : MonoBehaviour
                         srSandBack.sprite = nightSandBack;
                         srSandFront.sprite = nightSandFront;
                         srSky.sprite = nightSky;
+
+                        srGroundColor.color = groundColorDope;
                     }
 
                     else
@@ -256,6 +263,7 @@ public class InventoryManager : MonoBehaviour
                 srSandBack.sprite = daySandBack;
                 srSandFront.sprite = daySandFront;
                 srSky.sprite = daySky;
+                srGroundColor.color = groundColorNormal;
                 #endregion
 
             }
